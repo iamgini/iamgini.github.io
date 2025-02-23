@@ -742,8 +742,6 @@ $ ldapsearch -x  -H ldap://192.168.57.137:389 -D "CN=ansible_bind,CN=Users,DC=ex
 $ ldapsearch -x  -H ldap://192.168.57.137:389 -D "CN=ansible_bind,CN=Users,DC=example,DC=com" -w yourbindpassword -b "cn=devops,cn=Users,dc=example,dc=com"
 ```
 
-
-
 ## Best practices
 
 - [Performance tuning for automation controller](https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.4/html/automation_controller_administration_guide/assembly-controller-improving-performance)
@@ -752,3 +750,4 @@ $ ldapsearch -x  -H ldap://192.168.57.137:389 -D "CN=ansible_bind,CN=Users,DC=ex
 
 - [Janus](https://github.com/ansible-middleware/janus) - The project ansible-middleware/janus holds a set of playbooks used to transform upstream collection (such as ansible-middleware/wildfly) to downstream collection (redhat/eap) using [FQCN migration|https://github.com/ansible-collections/community.fqcn_migration]. Please refers to this project for more information.
 - [community.fqcn_migration](https://github.com/ansible-collections/community.fqcn_migration) - This project, called fqcn_migration, is a set of Ansible roles designed to rename a collection and even changed its namespace.
+- [How to Stop/Start/Restart & Disable/Enable Containerized Ansible Automation Platform 2.5 using systemd?](https://access.redhat.com/solutions/7090499)
