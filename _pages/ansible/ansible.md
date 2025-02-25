@@ -139,10 +139,11 @@ Update required repo for AAP 2.1
 
 Download Options:
 
-- Option A: From [access.redhat.com/downloads](https://access.redhat.com/downloads/content/480)(Note, you must have a Red Hat customer account to access the downloads)
-- Option B: From [releases.ansible.com](https://releases.ansible.com/ansible-tower/setup/).
-- Option C: From [developers.redhat.com](https://developers.redhat.com/products/ansible/download?source=sso)
-- Download the old versions of Ansible Tower - [setup](https://releases.ansible.com/ansible-tower/setup/) | [bundle](https://releases.ansible.com/ansible-tower/setup-bundle/) | [OpenShift installer](https://releases.ansible.com/ansible-tower/setup_openshift/) - For migration activities.
+- [access.redhat.com/downloads](https://access.redhat.com/downloads/content/480)(Note, you must have a Red Hat customer account to access the downloads)
+- [developers.redhat.com](https://developers.redhat.com/products/ansible/download?source=sso)
+- Old versions of Ansible Tower: [setup](https://releases.ansible.com/ansible-tower/setup/)
+- Old versions of Ansible Tower: [bundle](https://releases.ansible.com/ansible-tower/setup-bundle/)
+- Old versions of Ansible Tower: [OpenShift installer](https://releases.ansible.com/ansible-tower/setup_openshift/) - For migration activities.
 - [AAP Nightly Builds](http://nightlies.testing.ansible.com/ansible-tower_nightlies_m8u16fz56qr6q7/released/2.4/setup-bundle/x86_64/)
 - [aap-containerized-nightlies](http://nightlies.testing.ansible.com/aap-containerized-installer_o145Sdsti5fcoUJi/)
 
