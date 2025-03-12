@@ -57,7 +57,8 @@ titleshort: Ansible
 - [Ansible for IBM Power](#ansible-for-ibm-power)
 - [Ansible for Arista Networks](#ansible-for-arista-networks)
 - [Ansible for CIS Hardening/CIS Check](#ansible-for-cis-hardeningcis-check)
-- [Ansible AD/LDAP Integration](#ansible-adldap-integration)
+- [AD/LDAP Integration - AAP 2.5](#adldap-integration---aap-25)
+- [AD/LDAP Integration - AAP 2.4](#adldap-integration---aap-24)
   - [Example LDAP Configuration for Ansible Automation Platform](#example-ldap-configuration-for-ansible-automation-platform)
   - [LDAP Troubleshooting and testing](#ldap-troubleshooting-and-testing)
 - [Best practices](#best-practices)
@@ -518,7 +519,11 @@ Ansible 2.5 and above work with Python 3.
 ## Ansible for CIS Hardening/CIS Check
 - [DevSec Hardening Framework](https://github.com/dev-sec) / [devops + security - Server Hardening Automation](https://dev-sec.io/)
 
-## Ansible AD/LDAP Integration
+## AD/LDAP Integration - AAP 2.5
+
+In-Progress
+
+## AD/LDAP Integration - AAP 2.4
 
 ### Example LDAP Configuration for Ansible Automation Platform
 
