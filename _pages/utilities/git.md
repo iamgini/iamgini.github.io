@@ -23,6 +23,7 @@ git checkout -b new-branch
 
 # push new branch to remote
 git push -u origin new-branch
+git push --set-upstream origin new-branch
 
 # fetch the latest changes from remote
 git fetch origin
