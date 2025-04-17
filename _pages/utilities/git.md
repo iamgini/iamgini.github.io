@@ -11,6 +11,25 @@ image: "assets/images/tools-1426927308491-6380b6a9936f.jpeg"
 #titleshort: Git
 ---
 
+- [Git Cheat Sheet](#git-cheat-sheet)
+- [How to clean Git commit history](#how-to-clean-git-commit-history)
+
+
+## Git Cheat Sheet
+
+```shell
+# Checkout a new branch
+git checkout -b new-branch
+
+# push new branch to remote
+git push -u origin new-branch
+
+# fetch the latest changes from remote
+git fetch origin
+
+# Merge the latest main into your branch
+git merge origin/main
+```
 
 ## How to clean Git commit history
 
@@ -22,7 +41,7 @@ git checkout --orphan temp_branch
 git add -A
 git commit -am "the first commit"
 
-# Delete master Branch 
+# Delete master Branch
 git branch -D main
 
 # Rename temp/Current Branch to master
