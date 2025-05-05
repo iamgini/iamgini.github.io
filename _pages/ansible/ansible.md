@@ -58,9 +58,9 @@ titleshort: Ansible
 - [Ansible for Arista Networks](#ansible-for-arista-networks)
 - [Ansible for CIS Hardening/CIS Check](#ansible-for-cis-hardeningcis-check)
 - [AD/LDAP Integration - AAP 2.5](#adldap-integration---aap-25)
+  - [Authentication mapping](#authentication-mapping)
 - [AD/LDAP Integration - AAP 2.4](#adldap-integration---aap-24)
-  - [Example LDAP Configuration for Ansible Automation Platform](#example-ldap-configuration-for-ansible-automation-platform)
-  - [LDAP Troubleshooting and testing](#ldap-troubleshooting-and-testing)
+- [LDAP Troubleshooting and testing](#ldap-troubleshooting-and-testing)
 - [Best practices](#best-practices)
 - [Utilities and References](#utilities-and-references)
 
@@ -521,39 +521,37 @@ Ansible 2.5 and above work with Python 3.
 
 ## AD/LDAP Integration - AAP 2.5
 
-In-Progress
+(In-Progress)
 
-## AD/LDAP Integration - AAP 2.4
+Example LDAP Configuration for Ansible Automation Platform
 
-### Example LDAP Configuration for Ansible Automation Platform
-
-- **Name**: `ActiveDirectoryExampleCom`
+- **Name**: `ActiveDirectorySandboxDev`
 - **Type**: `LDAP`
-- **LDAP Server URI**: `ldap://192.168.57.137:389`
-- **LDAP Bind DN**: `CN=ansible_bind,CN=users,DC=example,DC=com`
-- **LDAP Bind Password**: your-bind-user-password
-- **LDAP Group Type**: `MemberDNGroupType`
-- **LDAP User DN Template**:
+- **LDAP Server URI**: `ldap://192.168.57.101:389`
+- **LDAP Bind DN**: `cn=ansible_bind,cn=users,dc=sandbox,dc=dev`
+- **LDAP Bind Password**: `your-bind-user-password`
+- **LDAP Group Type**: `ActiveDirectoryGroupType`
+- **LDAP User DN Template**: Optional
 
 NOTE: This LDAP User DN Template configuration has not tested successfully.
 
 ```shell
-sAMAccountName=%(user)s,OU=AAP,DC=example,DC=com
+sAMAccountName=%(user)s,OU=AAP,DC=sandbox,DC=dev
 ```
 
 For openLDAP style it would be of below format
 
 ```shell
-uid=%(user)s,cn=users,cn=accounts,dc=example,dc=com
+uid=%(user)s,cn=users,cn=accounts,dc=sandbox,dc=dev
 ```
 
 - **LDAP Start TLS**: Off/On
-- **LDAP Require Group** (optional): `CN=aap-users,OU=AAP,DC=example,DC=com`
+- **LDAP Require Group** (optional): `CN=aap-users,OU=AAP,DC=sandbox,DC=dev`
 - **LDAP User Search**:
 
 ```json
 [
-  "DC=example,DC=com",
+  "cn=users,dc=sandbox,dc=dev",
   "SCOPE_SUBTREE",
   "(sAMAccountName=%(user)s)"
 ]
@@ -563,7 +561,107 @@ uid=%(user)s,cn=users,cn=accounts,dc=example,dc=com
 
 ```json
 [
-  "DC=example,DC=com",
+  "cn=users,dc=sandbox,dc=dev",
+  "SCOPE_SUBTREE",
+  "(objectClass=group)"
+]
+```
+
+- **LDAP User Attribute Map**:
+
+```json
+{
+  "email": "mail",
+  "last_name": "sn",
+  "first_name": "givenName"
+}
+```
+
+- **LDAP Group Type Parameters**:
+
+```json
+{
+  "name_attr": "cn"
+}
+```
+
+### Authentication mapping
+
+Examples:
+
+**Superuser:**
+
+- Trigger: Groups
+- Groups: `cn=aap-admins,cn=users,dc=sandbox,dc=dev`
+
+**NW-Org-Admin:**
+
+- Trigger: Groups
+- Groups: `cn=network-admins,cn=users,dc=sandbox,dc=dev`
+
+**NW-Org-Member:**
+
+- Trigger: Groups
+- Groups: `cn=network-team,cn=users,dc=sandbox,dc=dev`
+
+**NW-Team-Admins:**
+
+- Trigger: Groups
+- Groups: `cn=network-admins,cn=users,dc=sandbox,dc=dev`
+- Team: Network-Admins
+- Organization: Network Dept
+- Role: Team Admin
+
+**NW-Org-Member:**
+
+- Trigger: Groups
+- Groups: `cn=network-team,cn=users,dc=sandbox,dc=dev`
+- Team: Network-Team
+- Organization: Network Dept
+- Role: Team Member
+
+
+## AD/LDAP Integration - AAP 2.4
+
+Example LDAP Configuration for Ansible Automation Platform
+
+- **Name**: `ActiveDirectoryExampleCom`
+- **Type**: `LDAP`
+- **LDAP Server URI**: `ldap://192.168.57.101:389`
+- **LDAP Bind DN**: `CN=ansible_bind,CN=users,DC=sandbox,DC=dev`
+- **LDAP Bind Password**: your-bind-user-password
+- **LDAP Group Type**: `MemberDNGroupType`
+- **LDAP User DN Template**:
+
+NOTE: This LDAP User DN Template configuration has not tested successfully.
+
+```shell
+sAMAccountName=%(user)s,OU=AAP,DC=sandbox,DC=dev
+```
+
+For openLDAP style it would be of below format
+
+```shell
+uid=%(user)s,cn=users,cn=accounts,DC=sandbox,DC=dev
+```
+
+- **LDAP Start TLS**: Off/On
+- **LDAP Require Group** (optional): `CN=aap-users,OU=AAP,DC=sandbox,DC=dev`
+- **LDAP User Search**:
+
+```json
+[
+  "DC=sandbox,DC=dev",
+  "SCOPE_SUBTREE",
+  "(sAMAccountName=%(user)s)"
+]
+```
+
+- **LDAP Group Search**:
+
+```json
+[
+  "DC=sandbox,DC=dev",
   "SCOPE_SUBTREE",
   "(objectClass=group)"
 ]
@@ -593,13 +691,13 @@ uid=%(user)s,cn=users,cn=accounts,dc=example,dc=com
 ```json
 {
   "Network-Ops": {
-    "admins": "CN=network_admins,OU=AAP,DC=example,DC=com",
+    "admins": "CN=network_admins,OU=AAP,DC=sandbox,DC=dev",
     "remove_admins": false,
     "remove_users": false,
     "users": true
   },
   "XYZCorp-CaC": {
-    "admins": "CN=ansible_admins,OU=AAP,DC=example,DC=com",
+    "admins": "CN=ansible_admins,OU=AAP,DC=sandbox,DC=dev",
     "remove_admins": false,
     "remove_users": false,
     "users": true
@@ -614,27 +712,27 @@ uid=%(user)s,cn=users,cn=accounts,dc=example,dc=com
   "cac-admins": {
     "organization": "XYZCorp-CaC",
     "remove": true,
-    "users": "cn=ansible_admins,ou=AAP,dc=example,dc=com"
+    "users": "cn=ansible_admins,ou=AAP,DC=sandbox,DC=dev"
   },
   "cac-operators": {
     "organization": "XYZCorp-CaC",
     "remove": true,
-    "users": "cn=ansible_operators,ou=AAP,dc=example,dc=com"
+    "users": "cn=ansible_operators,ou=AAP,DC=sandbox,DC=dev"
   },
   "network-admins": {
     "organization": "Network-Ops",
     "remove": true,
-    "users": "cn=network_admins,ou=AAP,dc=example,dc=com"
+    "users": "cn=network_admins,ou=AAP,DC=sandbox,DC=dev"
   },
   "network-operators": {
     "organization": "Network-Ops",
     "remove": true,
-    "users": "cn=network_operators,ou=AAP,dc=example,dc=com"
+    "users": "cn=network_operators,ou=AAP,DC=sandbox,DC=dev"
   }
 }
 ```
 
-### LDAP Troubleshooting and testing
+## LDAP Troubleshooting and testing
 
 ```shell
 # install ldap client if doe
@@ -647,9 +745,9 @@ $ sudo yum install nmap-ncat -y
 **Ensure you can reach the LDAP server and port:**
 
 ```shell
-$ nc -zv 192.168.57.137 389
+$ nc -zv 192.168.57.101 389
 Ncat: Version 7.92 ( https://nmap.org/ncat )
-Ncat: Connected to 192.168.57.137:389.
+Ncat: Connected to 192.168.57.101:389.
 Ncat: 0 bytes sent, 0 bytes received in 0.06 seconds.
 ```
 
@@ -658,7 +756,19 @@ Ncat: 0 bytes sent, 0 bytes received in 0.06 seconds.
 Verify if the ansible_bind account can bind to LDAP:
 
 ```shell
-$ ldapwhoami -x -H ldap://192.168.57.137:389 -D "CN=ansible_bind,CN=users,DC=example,DC=com" -w 'Welcome123'
+$ ldapwhoami -x -H ldap://192.168.57.101:389 -D "CN=ansible_bind,CN=users,DC=sandbox,DC=dev" -w 'Welcome123'
+```
+Or use environment variables for quick access
+```shell
+export LDAP_SERVER=192.168.57.101
+export LDAP_PORT=389
+export LDAP_BIND_USER=ansible_bind
+export LDAP_BIND_PASSWORD='Welcome123'
+
+ldapwhoami -x \
+  -H ldap://${LDAP_SERVER}:${LDAP_PORT} \
+  -D "CN=${LDAP_BIND_USER},CN=Users,DC=sandbox,DC=dev" \
+  -w "${LDAP_BIND_PASSWORD}"
 ```
 
 **Test LDAP User Search**
@@ -666,11 +776,11 @@ $ ldapwhoami -x -H ldap://192.168.57.137:389 -D "CN=ansible_bind,CN=users,DC=exa
 Validate the user search query:
 
 ```shell
-$ ldapsearch -x -H ldap://192.168.57.137:389 \
--D "CN=ansible_bind,CN=users,DC=example,DC=com" \
+$ ldapsearch -x -H ldap://192.168.57.101:389 \
+-D "CN=ansible_bind,CN=users,DC=sandbox,DC=dev" \
 -w 'Welcome123' \
--b "DC=example,DC=com" \
-"(sAMAccountName=user1)"
+-b "DC=sandbox,DC=dev" \
+"(sAMAccountName=john)"
 ```
 
 **Test LDAP Group Search**
@@ -678,11 +788,11 @@ $ ldapsearch -x -H ldap://192.168.57.137:389 \
 Validate the group search query:
 
 ```shell
-$ ldapsearch -x -H ldap://192.168.57.137:389 \
--D "CN=ansible_bind,CN=users,DC=example,DC=com" \
+$ ldapsearch -x -H ldap://192.168.57.101:389 \
+-D "CN=ansible_bind,CN=users,DC=sandbox,DC=dev" \
 -w 'Welcome123' \
--b "DC=example,DC=com" \
-"(objectClass=ansible_operators)"
+-b "DC=sandbox,DC=dev" \
+"(objectClass=network-team)"
 ```
 
 **Verify LDAP User Attribute Mapping**
@@ -690,11 +800,11 @@ $ ldapsearch -x -H ldap://192.168.57.137:389 \
 Check if email, givenName, and sn attributes are available for a user:
 
 ```shell
-$ ldapsearch -x -H ldap://192.168.57.137:389 \
--D "CN=ansible_bind,CN=users,DC=example,DC=com" \
+$ ldapsearch -x -H ldap://192.168.57.101:389 \
+-D "CN=ansible_bind,CN=users,DC=sandbox,DC=dev" \
 -w 'Welcome123' \
--b "DC=example,DC=com" \
-"(sAMAccountName=user1)" mail givenName sn
+-b "DC=sandbox,DC=dev" \
+"(sAMAccountName=john)" mail givenName sn
 ```
 
 **Verify Group Membership**
@@ -702,11 +812,11 @@ $ ldapsearch -x -H ldap://192.168.57.137:389 \
 If you want to validate if a user belongs to a specific group:
 
 ```shell
-$ ldapsearch -x -H ldap://192.168.57.137:389 \
--D "CN=ansible_bind,CN=users,DC=example,DC=com" \
+$ ldapsearch -x -H ldap://192.168.57.101:389 \
+-D "CN=ansible_bind,CN=users,DC=sandbox,DC=dev" \
 -w 'Welcome123' \
--b "DC=example,DC=com" \
-"(member=CN=user1,CN=users,DC=example,DC=com)"
+-b "DC=sandbox,DC=dev" \
+"(member=CN=user1,CN=users,DC=sandbox,DC=dev)"
 ```
 
 - Replace `user1` with an actual LDAP username.
@@ -716,11 +826,11 @@ $ ldapsearch -x -H ldap://192.168.57.137:389 \
 If LDAP Start TLS is On, test the TLS connection:
 
 ```shell
-$ ldapsearch -x -H ldap://192.168.57.137:389 \
+$ ldapsearch -x -H ldap://192.168.57.101:389 \
 -Z \
--D "CN=ansible_bind,CN=users,DC=example,DC=com" \
+-D "CN=ansible_bind,CN=users,DC=sandbox,DC=dev" \
 -w 'Welcome123' \
--b "DC=example,DC=com" \
+-b "DC=sandbox,DC=dev" \
 "(sAMAccountName=user1)"
 ```
 
@@ -731,21 +841,21 @@ $ ldapsearch -x -H ldap://192.168.57.137:389 \
 If Ansible Automation Platform is running in a container:
 
 ```shell
-$ podman exec -it <container_name> bash
-ldapsearch -x -H ldap://192.168.57.137:389 \
--D "CN=ansible_bind,CN=users,DC=example,DC=com" \
+$ podman exec -it <container_name> bash \
+ldapsearch -x -H ldap://192.168.57.101:389 \
+-D "CN=ansible_bind,CN=users,DC=sandbox,DC=dev" \
 -w 'Welcome123' \
--b "DC=example,DC=com" \
-"(sAMAccountName=user1)"
+-b "DC=sandbox,DC=dev" \
+"(sAMAccountName=john)"
 ```
 
 - Replace `<container_name>` with the appropriate container name.
 
 ```shell
-$ ldapsearch -x  -H ldap://192.168.57.137:389 -D "CN=ansible_bind,CN=Users,DC=example,DC=com" -b "dc=example,dc=com" -w yourbindpassword
+$ ldapsearch -x  -H ldap://192.168.57.101:389 -D "CN=ansible_bind,CN=Users,DC=sandbox,DC=dev" -b "DC=sandbox,DC=dev" -w yourbindpassword
 
 # search for a specific user
-$ ldapsearch -x  -H ldap://192.168.57.137:389 -D "CN=ansible_bind,CN=Users,DC=example,DC=com" -w yourbindpassword -b "cn=devops,cn=Users,dc=example,dc=com"
+$ ldapsearch -x  -H ldap://192.168.57.101:389 -D "CN=ansible_bind,CN=Users,DC=sandbox,DC=dev" -w yourbindpassword -b "cn=devops,cn=Users,DC=sandbox,DC=dev"
 ```
 
 ## Best practices
