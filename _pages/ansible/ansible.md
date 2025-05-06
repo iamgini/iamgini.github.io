@@ -620,6 +620,10 @@ Examples:
 - Organization: Network Dept
 - Role: Team Member
 
+**References:**
+
+- [AAP - Access management and authentication](https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.5/html-single/access_management_and_authentication/index)
+- [Failure to map Microsoft Active Directory LDAP groups in Ansible Automation Platform 2.5](https://access.redhat.com/solutions/7093912)
 
 ## AD/LDAP Integration - AAP 2.4
 
