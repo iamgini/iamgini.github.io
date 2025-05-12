@@ -398,6 +398,27 @@ Then use `minikube node add` to add nodes to an existing cluster.
 
 ```
 
+Or using podman
+
+By default, `minikube` executes Podman with sudo. To use Podman without sudo, set the rootless property to true:
+
+```shell
+$ minikube config set rootless true
+```
+
+```shell
+$ minikube start \
+    --driver=podman \
+    --nodes 5 \
+    --ha \
+    --cni calico \
+    --cpus=2 \
+    --memory=2g \
+    --kubernetes-version=v1.33.0 \
+    --container-runtime=containerd \
+    --profile k8s-133-podman
+```
+
 ## Finished Testing ?
 
 ```shell
