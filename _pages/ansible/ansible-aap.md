@@ -7,7 +7,7 @@ tags: [ aap, cloud, automation, containers, kubernetes, ansible automation platf
 permalink: aap
 featured: false
 hidden: false
-titleshort: Ansible
+titleshort: AAP
 ---
 
 - [1. Ansible Automation Platform](#1-ansible-automation-platform)
