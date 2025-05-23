@@ -19,7 +19,7 @@ email: 'net.gini@gmail.com'
 
 google_analytics: 'UA-158250524-1'
 
-include: ["_pages"]
+include: ["_pages", "_content"]
 permalink: /:title/
 
 # Plugins

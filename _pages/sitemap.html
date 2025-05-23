@@ -21,11 +21,26 @@ permalink: "/sitemap"
                 <img alt="{{ site.authors.gini.name }}" src="{{site.baseurl}}/{{ site.authors.gini.avatar }}" class="rounded-circle" height="100" width="100">
             </div>
         </div>
-        <h4 class="font-weight-bold spanborder"><span>Event History</span></h4>
-            {% assign events_list = site.data.events | sort: 'date' | reverse %}
-            {% for event in events_list %}
-                {% include event-loop-card.html %}
-            {% endfor %}
+        <!-- start sitemap section -->
+        <div class="jumbotron jumbotron-fluid-round jumbotron-home pt-0 pb-0 mt-3 mb-2rem bg-lightgreen2 position-relative">
+            <div class="pl-4 pr-0 h-100 tofront">
+                <div class="row justify-content-between">
+                    <!-- removed d-none from below-->
+                    <div class="col-md-12 pt-5 pb-5 d-md-block pr-0" style="vertical-align: middle; padding-left: 0xp;">
+                        <div style="vertical-align: middle;">
+                            {% for post in site.pages %}
+                                <!--only from _pages -->
+                                {% if post.title and post.path contains '_pages/' %}
+                                    <a class="sscroll btn btn-light2 btn-sm" style="margin: 6px;" href="{{site.baseurl}}{{post.url}}">{{ post.title }}</a>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- end sitemap section -->
+
     </div>
 </div>
 </div>
