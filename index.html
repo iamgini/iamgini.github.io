@@ -50,7 +50,7 @@ description: "Personal Notes, Guides and Blogs"
                 <div style="vertical-align: middle;">
                     {% for post in site.pages %}
                         {% if post.titleshort %}
-                            <a class="sscroll btn btn-light2 btn-sm" style="margin: 6px;" href="{{site.baseurl}}{{post.url}}">{{ post.titleshort | downcase }} sss</a>
+                            <a class="sscroll btn btn-light2 btn-sm" style="margin: 6px;" href="{{site.baseurl}}{{post.url}}">{{ post.titleshort | downcase }}</a>
                         {% endif %}
                     {% endfor %}
                 </div>
