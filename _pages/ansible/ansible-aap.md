@@ -30,7 +30,7 @@ titleshort: AAP
 - [Ansible Automation Hub](#ansible-automation-hub)
 - [Tools for Ansible Automation Platform](#tools-for-ansible-automation-platform)
 - [Database Replication](#database-replication)
-  - [Verify Streaming Replication\*\*](#verify-streaming-replication)
+  - [Verify Streaming Replication](#verify-streaming-replication)
   - [Ansible Tower HA Failover](#ansible-tower-ha-failover)
   - [Database tips](#database-tips)
   - [Ansible Tower with database SSL connection enabled](#ansible-tower-with-database-ssl-connection-enabled)
@@ -586,7 +586,7 @@ $ ldapsearch -x  -H ldap://192.168.57.101:389 -D "CN=ansible_bind,CN=Users,DC=sa
 
 (Not officially supported)
 
-### Verify Streaming Replication**
+### Verify Streaming Replication
 
 **On primary database node**
 
