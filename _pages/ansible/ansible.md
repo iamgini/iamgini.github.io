@@ -10,7 +10,7 @@ hidden: false
 titleshort: Ansible
 ---
 
-## Ansible for Absolute Beginners
+## 1. Ansible for Absolute Beginners
 
 - [Ansible for Absolute Beginners - 30 Days of Ansible](techbeatly.com/ansible-course){:target="_blank"} (YouTube)
 - [Ansible Real Life Scenarios](techbeatly.com/ansible-real-life){:target="_blank"} (YouTube)
@@ -23,118 +23,48 @@ titleshort: Ansible
 
 **Table of Contents**
 
-- [Ansible for Absolute Beginners](#ansible-for-absolute-beginners)
-- [Ansible Automation Platform (Formerly Ansible Tower)](#ansible-automation-platform-formerly-ansible-tower)
-  - [Ansible Automation Platform - Containerized Setup](#ansible-automation-platform---containerized-setup)
-  - [Removing instance from cluster](#removing-instance-from-cluster)
-  - [Installing Ansible Automation Platfom](#installing-ansible-automation-platfom)
-    - [Enable RHEL and AAP Subscriptions](#enable-rhel-and-aap-subscriptions)
-    - [Prepare for Ansible Automation Platform Installation](#prepare-for-ansible-automation-platform-installation)
-    - [Get Registry Credential](#get-registry-credential)
-    - [Configure Ansible Automation Platform Installation Inventory](#configure-ansible-automation-platform-installation-inventory)
-    - [Run Setup Script](#run-setup-script)
-  - [Disaster Recovery for the Ansible Automation Platform](#disaster-recovery-for-the-ansible-automation-platform)
-  - [Ansible Tower HA and DR](#ansible-tower-ha-and-dr)
-    - [Verify Streaming Replication\*\*](#verify-streaming-replication)
-    - [Ansible Tower HA Failover](#ansible-tower-ha-failover)
-    - [Database tips](#database-tips)
-  - [Ansible Tower with database SSL connection enabled](#ansible-tower-with-database-ssl-connection-enabled)
-  - [Troubleshooting](#troubleshooting)
-  - [References](#references)
-- [Ansible on Clouds](#ansible-on-clouds)
-- [Red Hat Ansible Automation Platform Hardening Guide](#red-hat-ansible-automation-platform-hardening-guide)
-- [Migrating, Updating and Upgrading AAP](#migrating-updating-and-upgrading-aap)
-- [Ansible Automation Hub](#ansible-automation-hub)
-- [Ansible Playbook References](#ansible-playbook-references)
-- [Tools for Ansible](#tools-for-ansible)
-- [Ansible for Network Automation](#ansible-for-network-automation)
-- [Ansible and Python Modules](#ansible-and-python-modules)
-  - [Ansible and Python 3](#ansible-and-python-3)
-- [Ansible Blog/Articles to Follow](#ansible-blogarticles-to-follow)
-- [Ansible Interview Questions](#ansible-interview-questions)
-- [Ansible Modules](#ansible-modules)
-- [Other References](#other-references)
-- [Ansible for IBM Power](#ansible-for-ibm-power)
-- [Ansible for Arista Networks](#ansible-for-arista-networks)
-- [Ansible for CIS Hardening/CIS Check](#ansible-for-cis-hardeningcis-check)
-- [AD/LDAP Integration - AAP 2.5](#adldap-integration---aap-25)
-  - [Authentication mapping](#authentication-mapping)
-- [AD/LDAP Integration - AAP 2.4](#adldap-integration---aap-24)
-- [LDAP Troubleshooting and testing](#ldap-troubleshooting-and-testing)
-- [Best practices](#best-practices)
-- [Utilities and References](#utilities-and-references)
+- [1. Ansible for Absolute Beginners](#1-ansible-for-absolute-beginners)
+- [2. Ansible Automation Platform (Formerly Ansible Tower)](#2-ansible-automation-platform-formerly-ansible-tower)
+    - [2.0.1. Prepare for Ansible Automation Platform Installation](#201-prepare-for-ansible-automation-platform-installation)
+    - [2.0.2. Get Registry Credential](#202-get-registry-credential)
+    - [2.0.3. Configure Ansible Automation Platform Installation Inventory](#203-configure-ansible-automation-platform-installation-inventory)
+    - [2.0.4. Run Setup Script](#204-run-setup-script)
+  - [2.1. Disaster Recovery for the Ansible Automation Platform](#21-disaster-recovery-for-the-ansible-automation-platform)
+  - [2.2. Ansible Tower HA and DR](#22-ansible-tower-ha-and-dr)
+    - [2.2.1. Verify Streaming Replication\*\*](#221-verify-streaming-replication)
+    - [2.2.2. Ansible Tower HA Failover](#222-ansible-tower-ha-failover)
+    - [2.2.3. Database tips](#223-database-tips)
+  - [2.3. Ansible Tower with database SSL connection enabled](#23-ansible-tower-with-database-ssl-connection-enabled)
+  - [2.4. Troubleshooting](#24-troubleshooting)
+  - [2.5. References](#25-references)
+- [3. Ansible on Clouds](#3-ansible-on-clouds)
+- [4. Red Hat Ansible Automation Platform Hardening Guide](#4-red-hat-ansible-automation-platform-hardening-guide)
+- [5. Migrating, Updating and Upgrading AAP](#5-migrating-updating-and-upgrading-aap)
+- [6. Ansible Automation Hub](#6-ansible-automation-hub)
+- [7. Ansible Playbook References](#7-ansible-playbook-references)
+- [8. Tools for Ansible](#8-tools-for-ansible)
+- [9. Ansible for Network Automation](#9-ansible-for-network-automation)
+- [10. Ansible and Python Modules](#10-ansible-and-python-modules)
+  - [10.1. Ansible and Python 3](#101-ansible-and-python-3)
+- [11. Ansible Blog/Articles to Follow](#11-ansible-blogarticles-to-follow)
+- [12. Ansible Interview Questions](#12-ansible-interview-questions)
+- [13. Ansible Modules](#13-ansible-modules)
+- [14. Other References](#14-other-references)
+- [15. Ansible for IBM Power](#15-ansible-for-ibm-power)
+- [16. Ansible for Arista Networks](#16-ansible-for-arista-networks)
+- [17. Ansible for CIS Hardening/CIS Check](#17-ansible-for-cis-hardeningcis-check)
+- [18. AD/LDAP Integration - AAP 2.5](#18-adldap-integration---aap-25)
+  - [18.1. Authentication mapping](#181-authentication-mapping)
+- [19. AD/LDAP Integration - AAP 2.4](#19-adldap-integration---aap-24)
+- [20. LDAP Troubleshooting and testing](#20-ldap-troubleshooting-and-testing)
+- [21. Best practices](#21-best-practices)
+- [22. Utilities and References](#22-utilities-and-references)
 
 
-## Ansible Automation Platform (Formerly Ansible Tower)
-
-### Ansible Automation Platform - Containerized Setup
-
-```shell
-$ export ANSIBLE_COLLECTIONS_PATH=/home/devops/ansible-automation-platform-containerized-setup-bundle-2.4-1-x86_64/collections/
-
-$ ansible-playbook -i inventory ansible.containerized_installer.install
-```
-
-To uninstall a containerized deployment, execute the uninstall.yml playbook.
+## 2. Ansible Automation Platform (Formerly Ansible Tower)
 
 
-```shell
-$ ansible-playbook -i inventory ansible.containerized_installer.uninstall
-```
-
-This will stop all systemd units and containers and then delete all resources used by the containerized installer such as:
-
-- config and data directories/files
-- systemd unit files
-- podman containers and images
-- RPM packages
-
-References:
- - [Containerized Ansible Automation Platform Installation Guide](https://access.redhat.com/documentation/en-us/red_hat_ansible_automation_platform/2.4/html-single/containerized_ansible_automation_platform_installation_guide/index)
-
-
-### Removing instance from cluster
-
-```shell
-bash-4.4$ awx-manage deprovision_instance --hostname aap-rhel-92-2.lab.local
-Instance Removed
-Successfully deprovisioned aap-rhel-92-2.lab.local
-(changed: True)
-```
-
-### Installing Ansible Automation Platfom
-
-*Note : The Ansible Automation Platform installer only supports Red Hat Enterprise Linux and CentOS.*
-
-#### Enable RHEL and AAP Subscriptions
-
-Make sure you subscribed to Red Hat and added RHEL Subscription.
-
-```shell
-# subscription-manager register
-# subscription-manager attach --pool=<pool_id of RHEL subscription>
-# subscription-manager list --consumed
-```
-
-Now, search for Ansible Automation Platform subscription and attach the pool ID.
-
-```shell
-# subscription-manager list --available --all | grep "Ansible Automation Platform" -B 3 -A 6
-# subscription-manager attach --pool=<pool_id>
-# subscription-manager list --consumed
-```
-
-Update required repo for AAP 2.1
-
-```shell
-# subscription-manager repos \
-  --disable=ansible-automation-platform-2.0-early-access-for-rhel-8-x86_64-rpms
-
-# subscription-manager repos \
-  --enable=ansible-automation-platform-2.1-for-rhel-8-x86_64-rpms
-```
-
-#### Prepare for Ansible Automation Platform Installation
+#### 2.0.1. Prepare for Ansible Automation Platform Installation
 
 1. Download the latest Ansible Automation Platform Installation Program
 
@@ -155,7 +85,7 @@ $ tar xvzf ansible-tower-setup-latest.tar.gz
 $ cd ansible-tower-setup-<tower_version>
 ```
 
-#### Get Registry Credential
+#### 2.0.2. Get Registry Credential
 
 You need access to Red Hat Container Registry to fetch the continer images for automation controller and execution environment.
 You can create a [service account in Red Hat registry](https://access.redhat.com/RegistryAuthentication#creating-registry-service-accounts-6) for the same and use the credential in AAP installation inventory.
@@ -171,11 +101,11 @@ registry_password='YOUR_SERICE_ACCOUNT_PASSWORD'
 
 Read more [Registry Service Account Management Application](https://access.redhat.com/RegistryAuthentication)
 
-#### Configure Ansible Automation Platform Installation Inventory
+#### 2.0.3. Configure Ansible Automation Platform Installation Inventory
 
 
 
-#### Run Setup Script
+#### 2.0.4. Run Setup Script
 
 ```shell
 # ./setup.sh
@@ -197,17 +127,17 @@ $ ansible_user=root ansible_ssh_private_key_file=”path_to_your_keyfile.pem” 
 $ ANSIBLE_BECOME_METHOD=’sudo’ ANSIBLE_BECOME=True ./setup.sh
 ```
 
-### Disaster Recovery for the Ansible Automation Platform
+### 2.1. Disaster Recovery for the Ansible Automation Platform
 
 Please note DR and High Availability (“HA”) are not currently supported. Current Ansible Automation Platform customers are needing to configure their DR instances to accurately reflect their node usage and need guidance based on changes due to manifest files. This can be for cold, warm, or hot DR/HA. This article regards how manifests are handled in DR and HA environments.
 
 Refer to the [documentation](https://access.redhat.com/articles/6967148).
 
 
-### Ansible Tower HA and DR
+### 2.2. Ansible Tower HA and DR
 
 _(TODO)_
-#### Verify Streaming Replication**
+#### 2.2.1. Verify Streaming Replication**
 
 **On primary database node**
 
@@ -291,7 +221,7 @@ or,
 (1 row)
 ```
 
-#### Ansible Tower HA Failover
+#### 2.2.2. Ansible Tower HA Failover
 
 Check current Tower database configurations.
 
@@ -318,7 +248,7 @@ DATABASES = {
 - [redhat-cop/automate-tower-ha-dr](https://github.com/redhat-cop/automate-tower-ha-dr)
 - [Ansible Tower High Availability and Disaster Recovery](https://www.redhat.com/en/blog/ansible-tower-high-availability-and-disaster-recovery) - April 8, 2019 / Marc Petrivelli, Red Hat Blog
 
-#### Database tips
+#### 2.2.3. Database tips
 
 **Check Data path**
 
@@ -336,7 +266,7 @@ pg_ctl: server is running (PID: 51581)
 
 
 
-### Ansible Tower with database SSL connection enabled
+### 2.3. Ansible Tower with database SSL connection enabled
 
 **Verify SSL Certificate-Key pair**
 
@@ -359,7 +289,7 @@ $ openssl req -noout -modulus -in <file>.csr | openssl md5
 - [Using ssl_password_file for nginx](http://nginx.org/en/docs/http/ngx_http_ssl_module.html#ssl_password_file)
 
 
-### Troubleshooting
+### 2.4. Troubleshooting
 
 - [Resolve error occurred while running Ansible Tower installation](https://bakingclouds.com/resolve-error-occurred-while-running-ansible-tower-installation/)
 - [Why Ansile Tower Setup Is Failing At 'Migrate the Tower database schema' Task With Errors 'Server does not support SSL' / 'certificate verify failed' / 'no pg_hba.conf entry for host' When Connecting To PostgreSQL Database With SSL Enabled ?](https://access.redhat.com/solutions/5044701)
@@ -369,7 +299,7 @@ $ openssl req -noout -modulus -in <file>.csr | openssl md5
 - [Why is Ansible Tower Restore Process Failing With Error `no pg_hba.conf entry for host x.x.x.x`?](https://access.redhat.com/solutions/5501731)
 
 
-### References
+### 2.5. References
 
 - [Explore Ansible Automation Platform](https://www.ansible.com/products/ansible-training) - Hands on Lab/Practices via **instruqt**.
 - [Red Hat Ansible Automation Platform installation guide - 2.](https://access.redhat.com/documentation/en-us/red_hat_ansible_automation_platform/2.1/html-single/red_hat_ansible_automation_platform_installation_guide/index)
@@ -392,31 +322,31 @@ $ openssl req -noout -modulus -in <file>.csr | openssl md5
 - [Tower - Previous versions](https://docs.ansible.com/automation-tower-prior-versions.html)
 - [Guidelines, Troubleshooting, and Recommended Configurations for Ansible Tower](https://access.redhat.com/articles/3344101)
 
-## Ansible on Clouds
+## 3. Ansible on Clouds
 
 - [Ansible Automation Platform - Cloud Deployments](https://docs.redhat.com/en/documentation/ansible_on_clouds/2.4)
 - [Ansible on Azure Articles](https://access.redhat.com/articles/6983528)
 
-## Red Hat Ansible Automation Platform Hardening Guide
+## 4. Red Hat Ansible Automation Platform Hardening Guide
 
 - [Red Hat Ansible Automation Platform hardening guide](https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.4/html-single/red_hat_ansible_automation_platform_hardening_guide/index)(Doc)
 - [Red Hat Ansible Automation Platform Hardening Guide](https://access.redhat.com/articles/7025278)
 
-## Migrating, Updating and Upgrading AAP
+## 5. Migrating, Updating and Upgrading AAP
 
 - [On-Prem Ansible Automation Platform Patching Procedure - OS Packages Update & AAP Packages Update](https://access.redhat.com/solutions/7034370)
 - [Frequently Asked Questions (FAQs) on OS Patching for Ansible Automation Platform 2.3 and later](https://access.redhat.com/articles/7050473)
 - [Migrating Red Hat Ansible Automation Platform to Ansible Automation Platform Operator](https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.4/html/deploying_the_red_hat_ansible_automation_platform_operator_on_openshift_container_platform/aap-migration)
 
 
-## Ansible Automation Hub
+## 6. Ansible Automation Hub
 
 [Documentation](https://docs.ansible.com/ansible/devel/reference_appendices/automationhub.html)
 
 - Installing [Ansible Galaxy NG](https://github.com/ansible/galaxy_ng/wiki/End-User-Installation)
 - [INSTALLING PRIVATE AUTOMATION HUB](https://access.redhat.com/documentation/en-us/red_hat_ansible_automation_platform/1.2/html/installing_private_automation_hub/index)
 
-## Ansible Playbook References
+## 7. Ansible Playbook References
 
 - [Ansible Examples](https://github.com/ginigangadharan/ansible-examples){:target="_blank"}
 (*Forked from [@ansible](https://github.com/ansible/ansible-examples)*)
@@ -424,19 +354,19 @@ $ openssl req -noout -modulus -in <file>.csr | openssl md5
 (*Forked from [geerlingguy](https://github.com/geerlingguy/ansible-for-devops)*)
 - [Ansible NXOS Samples](https://github.com/ginigangadharan/Ansible-NXOS){:target="_blank"} (Network Automation)
 
-## Tools for Ansible
+## 8. Tools for Ansible
 
 - [Ansible Automation Platform Inventory File Generator](https://access.redhat.com/labsinfo/aapifg){:target="_blank"}
 - [Ansible Automation Platform Upgrade Assistant](https://access.redhat.com/labs/aapua/){:target="_blank"}
 - [Ansible Silo](https://groupon.github.io/ansible-silo){:target="_blank"}
 - [ansible-risk-insight](https://github.com/ansible/ansible-risk-insight){:target="_blank"}: Ansible Risk Insight (ARI) is the tool to evaluate the quality and risk of the ansible content.
 
-## Ansible for Network Automation
+## 9. Ansible for Network Automation
 
 - [Network Device Authentication with Ansible 2.3](https://www.ansible.com/blog/network-device-authentication-with-ansible-2-3){:target="_blank"}
 
 
-## Ansible and Python Modules
+## 10. Ansible and Python Modules
 
 - [How to set up and use Python virtual environments for Ansible](https://www.redhat.com/sysadmin/python-venv-ansible)
 - [Running in a virtualenv](https://docs.ansible.com/ansible/latest/reference_appendices/faq.html#running-in-a-virtualenv)
@@ -470,7 +400,7 @@ $ pip -V
 # deactivate
 ```
 
-### Ansible and Python 3
+### 10.1. Ansible and Python 3
 
 - [Python 3 Support](https://docs.ansible.com/ansible/latest/reference_appendices/python_3_support.html)
 - [How Can I Use Virtual Environment with Python3 on RHEL 7 for Ansible Tower?](https://access.redhat.com/solutions/4371201)
@@ -486,40 +416,40 @@ Ansible 2.5 and above work with Python 3.
 ```
 
 
-## Ansible Blog/Articles to Follow
+## 11. Ansible Blog/Articles to Follow
 - [MyDailyTutorials](http://www.mydailytutorials.com/category/tutorials/ansible/){:target="_blank"}
 - [Ansible Blog](https://www.ansible.com/blog){:target="_blank"}
 - [Ansible & Cisco](https://blogs.cisco.com/tag/ansible){:target="_blank"}
 - [ansiblejunky.com](https://www.ansiblejunky.com/){:target="_blank"}
 - [ansible linting - Abhijeet Kamble](https://medium.com/faun/linting-your-ansible-playbooks-and-make-a-continuous-integration-ci-solution-bcf8b4ea4c03){:target="_blank"}
 
-## Ansible Interview Questions
+## 12. Ansible Interview Questions
 - [Question Bank 1](https://career.guru99.com/ansible-interview-questions-answers/){:target="_blank"}
 - [Question Bank 2](https://www.edureka.co/blog/interview-questions/ansible-interview-questions/){:target="_blank"}
 - [Question Bank 3](https://mindmajix.com/ansible-interview-questions){:target="_blank"}
 
-## Ansible Modules
+## 13. Ansible Modules
 
 - [Foreman Ansible Modules](https://github.com/theforeman/foreman-ansible-modules)
 
-## Other References
+## 14. Other References
 
 - [Red Hat Ansible Tower Life Cycle](https://access.redhat.com/support/policy/updates/ansible-tower)
 - [Red Hat Ansible Automation Platform Workshops](https://github.com/ansible/workshops)
 - [DEEP DIVE INTO ANSIBLE NETWORK RESOURCE MODULE](https://www.ansible.com/deep-dive-into-ansible-network-resource-module)
 
-## Ansible for IBM Power
+## 15. Ansible for IBM Power
 
 - [IBM Power Systems AIX collection](https://github.com/IBM/ansible-power-aix)
 
-## Ansible for Arista Networks
+## 16. Ansible for Arista Networks
 
 - [Ansible Modules for Arista CloudVision Platform](https://github.com/aristanetworks/ansible-cvp)
 
-## Ansible for CIS Hardening/CIS Check
+## 17. Ansible for CIS Hardening/CIS Check
 - [DevSec Hardening Framework](https://github.com/dev-sec) / [devops + security - Server Hardening Automation](https://dev-sec.io/)
 
-## AD/LDAP Integration - AAP 2.5
+## 18. AD/LDAP Integration - AAP 2.5
 
 (In-Progress)
 
@@ -585,7 +515,7 @@ uid=%(user)s,cn=users,cn=accounts,dc=sandbox,dc=dev
 }
 ```
 
-### Authentication mapping
+### 18.1. Authentication mapping
 
 Examples:
 
@@ -625,7 +555,7 @@ Examples:
 - [AAP - Access management and authentication](https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.5/html-single/access_management_and_authentication/index)
 - [Failure to map Microsoft Active Directory LDAP groups in Ansible Automation Platform 2.5](https://access.redhat.com/solutions/7093912)
 
-## AD/LDAP Integration - AAP 2.4
+## 19. AD/LDAP Integration - AAP 2.4
 
 Example LDAP Configuration for Ansible Automation Platform
 
@@ -736,7 +666,7 @@ uid=%(user)s,cn=users,cn=accounts,DC=sandbox,DC=dev
 }
 ```
 
-## LDAP Troubleshooting and testing
+## 20. LDAP Troubleshooting and testing
 
 ```shell
 # install ldap client if doe
@@ -902,11 +832,11 @@ $ ldapsearch -x  -H ldap://192.168.57.101:389 -D "CN=ansible_bind,CN=Users,DC=sa
 $ ldapsearch -x  -H ldap://192.168.57.101:389 -D "CN=ansible_bind,CN=Users,DC=sandbox,DC=dev" -w yourbindpassword -b "cn=devops,cn=Users,DC=sandbox,DC=dev"
 ```
 
-## Best practices
+## 21. Best practices
 
 - [Performance tuning for automation controller](https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.4/html/automation_controller_administration_guide/assembly-controller-improving-performance)
 
-## Utilities and References
+## 22. Utilities and References
 
 - [Janus](https://github.com/ansible-middleware/janus) - The project ansible-middleware/janus holds a set of playbooks used to transform upstream collection (such as ansible-middleware/wildfly) to downstream collection (redhat/eap) using [FQCN migration|https://github.com/ansible-collections/community.fqcn_migration]. Please refers to this project for more information.
 - [community.fqcn_migration](https://github.com/ansible-collections/community.fqcn_migration) - This project, called fqcn_migration, is a set of Ansible roles designed to rename a collection and even changed its namespace.
