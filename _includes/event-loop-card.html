@@ -7,7 +7,7 @@
 	   {{ post.excerpt  | strip_html | strip_newlines | truncate: 186}}
 	</p> -->
 	<small class="d-block">
-		Speaker(s): {{ event.speakers }}<br>
+		Speakers: {{ event.speakers }}<br>
 		{% if event.role == 'Host' %}<strong>Host: Gineesh Madapparambath</strong> <br>{% endif %}
 		{{ event.event }}({{ event.remarks }})
 	</small>
