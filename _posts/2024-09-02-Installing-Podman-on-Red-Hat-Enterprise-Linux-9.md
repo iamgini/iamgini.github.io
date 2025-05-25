@@ -11,6 +11,6 @@ featured: false
 hidden: false
 ---
 
-his tutorial will walk you through installing Podman on RHEL 9 and explore its advantages over Docker.
+This tutorial will walk you through installing Podman on RHEL 9 and explore its advantages over Docker.
 
 Read ["Installing Podman on Red Hat Enterprise Linux 9"](https://www.techbeatly.com/podman-rhel9/).
