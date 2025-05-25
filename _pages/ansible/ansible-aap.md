@@ -156,14 +156,14 @@ Successfully deprovisioned aap-rhel-92-2.lab.local
 
 The following steps regenerate a new SSL certificate for both automation controller and automation hub.
 
-Procedure
+- Add `aap_service_regen_cert=true` to the inventory file in the `[all:vars]` section:
 
-Add aap_service_regen_cert=true to the inventory file in the [all:vars] section:
-
+```inin
 [all:vars]
 aap_service_regen_cert=true
+```
 
-Run the installer.
+- Run the installer.
 
 ## AAP on Clouds
 
