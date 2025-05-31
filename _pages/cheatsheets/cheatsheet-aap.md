@@ -5,7 +5,7 @@ author: gini
 categories: [ cheat sheets ]
 image: "assets/images/2020/jon-moore-bBavss4ZQcA-unsplash-locks.jpg"
 tags: [cloud, automation, containers, kubernetes]
-permalink: cheatsheet-ansible
+permalink: cheatsheet-aap
 featured: false
 hidden: false
 showindex: true

@@ -59,3 +59,11 @@ ul.social-buttons li a:focus,
 ul.social-buttons li a:active {
   background-color: #{{ site.data.template.color.primary }};
 } */
+
+
+.wrapper {
+  max-width: 100% !important;
+  width: 100% !important;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}

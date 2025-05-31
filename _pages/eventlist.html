@@ -1,27 +1,74 @@
 ---
-title: "Events"
+title: "Community and Events"
 layout: default
 permalink: "/events"
 ---
-<div class="container">
+
+<div style="
+  position: relative;
+  background-color: aqua;
+  background-image: url('/assets/images/2024/gineesh-redhat-one-2024.jpeg');
+  background-size: cover;
+  background-position: top center;
+  height: 600px;
+  padding-bottom: 40px;  /* padding at bottom */
+  ">
+  <!-- Content container -->
+  <div class="container" style="
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    flex-direction: column; /* stack vertically */
+    justify-content: center; /* vertical center */
+    align-items: flex-start; /* left align */
+    padding-left: 20px;
+    gap: 10px; /* spacing between title and paragraph */
+  ">
+    <h2 class="article-headline" style="
+      color: white;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+      margin: 0;
+    ">{{page.title}}</h2>
+    <span class="small btn btn-sm btn-round" style="
+  background-color: #FF0000;  /* YouTube red */
+  color: white;               /* white text */
+  border: none;               /* no border */
+">
+  <a href="https://techbeatly.com/live" target="_blank" style="
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+  ">Watch on Demand</a>
+</span>
+
+    <p style="color: white; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); margin: 0;">
+      Journey Through the Past: Gineesh's Event History - Meetups, Speakers, Workshops, and Gathering
+    </p>
+  </div>
+</div>
+
+
+
+<div class="container" style="padding-top: 50px;">
 <div class="row justify-content-center">
     <div class="col-md-8">
         <div class="row align-items-center mb-5">
-            <div class="col-md-9">
-                <h2 class="font-weight-bold">{{page.title}}
+            <!-- <div class="col-md-9">
+                <h2 class="font-weight-bold">{{page.title}} -->
                     <!-- <span class="small btn btn-outline-success btn-sm btn-round"><a href="{{ site.authors.gini.twitter }}">Follow</a></span> -->
-                    <span class="small btn btn-outline-success btn-sm btn-round"><a href="https://techbeatly.com/live" target="_blank">Watch on Demand</a></span>
-                </h2>
+                    <!-- <span class="small btn btn-outline-success btn-sm btn-round"><a href="https://techbeatly.com/live" target="_blank">Watch on Demand</a></span> -->
+                <!-- </h2> -->
 
                 <!-- <p><a href="{{ site.authors.gini.site }}">{{ site.authors.gini.site }}</a></p> -->
                 <!-- <p class="excerpt">{{ site.authors.gini.bio }}</p> -->
-                <p class="excerpt">Journey Through the Past: Gineesh's Event History - Meetups, Speakers, Workshops, and Gathering</p>
+                <!-- <p class="excerpt">Journey Through the Past: Gineesh's Event History - Meetups, Speakers, Workshops, and Gathering</p>
             </div>
             <div class="col-md-3 text-right">
                 <img alt="{{ site.authors.gini.name }}" src="{{site.baseurl}}/{{ site.authors.gini.avatar }}" class="rounded-circle" height="100" width="100">
             </div>
-        </div>
-        <h4 class="font-weight-bold spanborder"><span>Event History</span></h4>
+        </div> -->
+        <!-- <h4 class="font-weight-bold spanborder"><span>Event History</span></h4> -->
             {% assign events_list = site.data.events | sort: 'date' | reverse %}
             {% for event in events_list %}
                 {% include event-loop-card.html %}
