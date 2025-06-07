@@ -30,8 +30,7 @@
   remarks: EP4
   url: https://www.youtube.com/watch?v=wbfGRIaGJpQ
 
-- num: '5'
-  date: 2021-07-14
+- date: 2021-07-14
   event: techbeatly Live
   title: Linux File Management Using Ansible
   speakers: Gineesh Madapparambath
@@ -39,8 +38,8 @@
   role: Speaker
   remarks: EP5
   reference: ''
-- num: '6'
-  date: 2021-07-19
+
+- date: 2021-07-19
   event: techbeatly Live
   title: Ansible Best Practices
   speakers: Gineesh Madapparambath
@@ -49,8 +48,7 @@
   reference: ''
   url: https://www.youtube.com/watch?v=V-1zUY3eVsg
 
-- num: '7'
-  date: 2021-07-24
+- date: 2021-07-24
   event: techbeatly Live
   title: Using Ansible with Terraform
   speakers: Gineesh Madapparambath
@@ -59,8 +57,7 @@
   reference: ''
   url: https://www.youtube.com/watch?v=KKz7P2pF7o8
 
-- num: '8'
-  date: 2021-07-28
+- date: 2021-07-28
   event: techbeatly Live
   title: Ansible for User Management
   speakers: Maithili Sharan
@@ -69,8 +66,7 @@
   reference: ''
   url: https://www.youtube.com/watch?v=RYYc63Mwrdw
 
-- num: '9'
-  date: 2021-07-31
+- date: 2021-07-31
   event: techbeatly Live
   title: How to Create a Free Website with GitHub Pages
   speakers: Gineesh Madapparambath
@@ -79,8 +75,7 @@
   reference: ''
   url: https://www.youtube.com/watch?v=bzD1UDozGuM&t=1931s
 
-- num: '10'
-  date: 2021-08-04
+- date: 2021-08-04
   event: techbeatly Live
   title: Ansible for Linux Filesystem Management
   speakers: Maithili Sharan
@@ -89,8 +84,7 @@
   reference: ''
   url: https://www.youtube.com/watch?v=2Vg4WcWJ-KQ
 
-- num: '11'
-  date: 2021-08-07
+- date: 2021-08-07
   event: techbeatly Live
   title: Ansible for Infrastructure Management
   speakers: Gineesh Madapparambath
@@ -99,8 +93,7 @@
   reference: ''
   url: https://www.youtube.com/watch?v=qSqA5jDPpxw
 
-- num: '12'
-  date: 2021-08-10
+- date: 2021-08-10
   event: techbeatly Live
   title: Introduction to Container Fundamentals
   speakers: Nived Velayudhan
@@ -109,8 +102,7 @@
   reference: ''
   url: https://www.youtube.com/watch?v=j1Q86BqRVt0
 
-- num: '13'
-  date: 2021-08-14
+- date: 2021-08-14
   event: DevOps Malayalam
   title: Ansible Best Practices
   speakers: 'Gineesh Madapparambath, Nived Velayudhan'
@@ -119,8 +111,7 @@
   reference: ''
   url: 'https://techbeatly.com/youtube'
 
-- num: '14'
-  date: 2021-08-14
+- date: 2021-08-14
   event: techbeatly Live
   title: Demystifying YAML for Ansible
   speakers: Gineesh Madapparambath
@@ -129,8 +120,7 @@
   reference: ''
   url: https://www.youtube.com/watch?v=lKLPJKwpHig
 
-- num: '15'
-  date: 2021-08-28
+- date: 2021-08-28
   event: DevOps Malayalam
   title: Ansible with Terraform
   speakers: Gineesh Madapparambath
@@ -139,8 +129,7 @@
   reference: ''
   url: 'https://techbeatly.com/youtube'
 
-- num: '16'
-  date: 2021-09-12
+- date: 2021-09-12
   event: techbeatly Live
   title: Introduction to Developer Sandbox for Red Hat OpenShift
   speakers: Gineesh Madapparambath
@@ -149,8 +138,7 @@
   reference: ''
   url: https://www.youtube.com/watch?v=vu5w74xfLcA&t=92s
 
-- num: '17'
-  date: 2021-09-20
+- date: 2021-09-20
   event: Ansible Singapore
   title: Ansible Custom Module Development
   speakers: Gineesh Madapparambath
@@ -159,8 +147,7 @@
   reference: ''
   url: 'https://techbeatly.com/youtube'
 
-- num: '18'
-  date: 2021-10-09
+- date: 2021-10-09
   event: DevOps Malayalam
   title: CKA Exam Praparation
   speakers: 'Gineesh Madapparambath, Jeswin K Ninan'
@@ -169,8 +156,7 @@
   reference: ''
   url: 'https://techbeatly.com/youtube'
 
-- num: '19'
-  date: 2021-10-09
+- date: 2021-10-09
   event: techbeatly Live
   title: Python Virtual Environment for Ansible
   speakers: Gineesh Madapparambath
@@ -179,8 +165,7 @@
   reference: ''
   url: https://www.youtube.com/watch?v=n2oO79cRkrs
 
-- num: '20'
-  date: 2021-10-30
+- date: 2021-10-30
   event: DevOps Malayalam
   title: Kubernetes vs Openshift
   speakers: Gineesh Madapparambath
@@ -189,8 +174,7 @@
   reference: ''
   url: 'https://techbeatly.com/youtube'
 
-- num: '21'
-  date: 2021-10-31
+- date: 2021-10-31
   event: techbeatly Live
   title: How to start with Ansible
   speakers: 'Gineesh Madapparambath, Amit Chettri, Soumya Dutta'
@@ -199,8 +183,7 @@
   reference: ''
   url: https://www.youtube.com/watch?v=JNIUHb4gqbw
 
-- num: '22'
-  date: 2022-06-25
+- date: 2022-06-25
   event: 'AWSUGKOCHI, CNCFKOCHI'
   title: Red Hat OpenShift Service on AWS
   speakers: 'Gineesh Madapparambath, Nived Velayudhan'
@@ -208,8 +191,7 @@
   remarks: in-person
   url: 'https://www.linkedin.com/feed/update/urn:li:activity:6946513948808527872?utm_source=share&utm_medium=member_desktop'
 
-- num: '23'
-  date: 2022-08-29
+- date: 2022-08-29
   event: Ansible Singapore
   title: VSCode for Ansible
   speakers: 'Gineesh Madapparambath, Jin Zhang'
@@ -218,8 +200,7 @@
   reference: ''
   url: 'https://techbeatly.com/youtube'
 
-- num: '24'
-  date: 2022-09-23
+- date: 2022-09-23
   event: Ansible workshop for Partners
   title: Ansible Hands on Workshop
   speakers: 'Gineesh Madapparambath, Jin and others'
@@ -228,8 +209,7 @@
   reference: ''
   url: 'https://techbeatly.com/youtube'
 
-- num: '25'
-  date: 2022-09-30
+- date: 2022-09-30
   event: Red Hat TAM Webinar
   title: AAP Migration
   speakers: 'Gineesh Madapparambath, Sabarinath'
@@ -238,8 +218,7 @@
   reference: ''
   url: 'https://techbeatly.com/youtube'
 
-- num: '26'
-  date: 2022-10-11
+- date: 2022-10-11
   event: 'National University of Singapore (NUS)'
   title: 'Software Development & DevOps Practices'
   speakers: Gineesh Madapparambath
@@ -256,6 +235,8 @@
   remarks: in-person
   reference: ''
   url: 'https://www.linkedin.com/posts/gineesh_nus-nus-nationaluniversityofsingapore-activity-7120582257953714177-iy6A?utm_source=share&utm_medium=member_desktop'
+  # image: /assets/images/events/2024-02-29-ansible-moleculess.jpeg
+
 
 - date: 2023-08-08
   event: 'National University of Singapore (NUS)'
@@ -266,8 +247,7 @@
   reference: ''
   url: 'https://www.linkedin.com/posts/gineesh_sharingiscaring-teachingandlearning-learningeveryday-activity-7159150665812910080-myaj?utm_source=share&utm_medium=member_desktop'
 
-- num: '27'
-  date: 2022-11-12
+- date: 2022-11-12
   event: Styava.dev
   title: Integrating Ansible Automation Platform with DevOps Workflows
   speakers: Gineesh Madapparambath
@@ -276,8 +256,7 @@
   reference: ''
   url: 'https://techbeatly.com/youtube'
 
-- num: '28'
-  date: 2022-11-23
+- date: 2022-11-23
   event: DevOps Malayalam
   title: Integrating Ansible with Jenkins
   speakers: Gineesh Madapparambath
@@ -286,8 +265,7 @@
   reference: ''
   url: 'https://techbeatly.com/youtube'
 
-- num: '29'
-  date: 2023-05-25
+- date: 2023-05-25
   event: techbeatly Live
   title: Red Hat Enterprise Linux at the Edge
   speakers: Rahul Vijayan
@@ -296,8 +274,7 @@
   reference: ''
   url: https://www.youtube.com/watch?v=PUQ8wpOYwE8&t=4s
 
-- num: '30'
-  date: 2023-05-25
+- date: 2023-05-25
   event: Ansible Singapore
   title: Ansible Navigator + Content Signing
   speakers: Gineesh Madapparambath
@@ -306,8 +283,7 @@
   reference: ''
   url: 'https://www.youtube.com/watch?v=Qpbhar1ggM4'
 
-- num: '31'
-  date: 2023-07-28
+- date: 2023-07-28
   event: Ansible Singapore
   title: Ansible Developing and Testing
   speakers: 'Gineesh Madapparambath, Anthony'
@@ -316,8 +292,7 @@
   reference: ''
   url: 'https://www.youtube.com/watch?v=72PB_XDz9KI'
 
-- num: '32'
-  date: 2023-07-29
+- date: 2023-07-29
   event: Singtel AI-ML Event
   title: Ansible EDA and AIOps
   speakers: Gineesh Madapparambath
@@ -326,8 +301,7 @@
   reference: ''
   url: 'https://www.linkedin.com/feed/update/urn:li:activity:7090914964466520064?updateEntityUrn=urn%3Ali%3Afs_feedUpdate%3A%28V2%2Curn%3Ali%3Aactivity%3A7090914964466520064%29'
 
-- num: '33'
-  date: 2023-08-05
+- date: 2023-08-05
   event: Kubernetes Kerala Meetup
   title: 'Kubernetes, OKD, and OpenShift: Unraveling Enterprise Kubernetes Platform'
   speakers: Gineesh Madapparambath
@@ -335,6 +309,7 @@
   remarks: Online
   reference: ''
   url: 'https://www.linkedin.com/posts/gineesh_kubernetes-cloudcomputing-devops-activity-7092776235516231680-Q9wF?utm_source=share&utm_medium=member_desktop'
+  # image: /assets/images/events/2024-02-29-ansible-moleculess.jpeg
 
 - date: 2024-02-29
   event: Ansible Singapore Meetup
@@ -344,3 +319,14 @@
   remarks: in-person
   reference: ''
   url: 'https://www.linkedin.com/posts/gineesh_ansiblesingapore-ansiblemeetup-ansible-activity-7164878427253141505-IkV-?utm_source=share&utm_medium=member_desktop'
+  image: /assets/images/events/2024-02-29-ansible-molecule.jpeg
+
+- date: 2025-03-18
+  event: K8SUG Singapore 37th Meetup @Trend Micro
+  title: 'Podman AI Lab: Local AI Development made Simple'
+  speakers: Gineesh Madapparambath
+  role: Speaker
+  remarks: in-person
+  reference: ''
+  url: 'https://www.linkedin.com/posts/gineesh_k8sug-kubernetes-podman-activity-7308666429568860160-KXKu?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAUcvyUBcmjVe-Hp0XRyKTlhgZx_Lk2t50c'
+  image: /assets/images/events/2025-03-18-k8sug-sg.jpeg

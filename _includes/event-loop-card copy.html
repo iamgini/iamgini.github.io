@@ -1,0 +1,25 @@
+<div class="mb-5 d-flex justify-content-between main-loop-card">
+<div class="pr-3">
+	<h2 class="mb-1 h4 font-weight-bold">
+	<a class="text-dark" href="{{event.url}}" target="_blank">{{ event.title }}</a>
+	</h2>
+	<!-- <p class="excerpt">
+	   {{ post.excerpt  | strip_html | strip_newlines | truncate: 186}}
+	</p> -->
+	<small class="d-block">
+		Speakers: {{ event.speakers }}<br>
+		{% if event.role == 'Host' %}<strong>Host: Gineesh Madapparambath</strong> <br>{% endif %}
+		{{ event.event }}({{ event.remarks }})
+	</small>
+	<small class="text-muted">
+		{{ event.date | date: '%b %d, %Y' }}
+	</small>
+</div>
+{% if event.image %}
+	<div class="col-md-3 pr-0 text-right">
+	<a href="{{site.baseurl}}{{post.url}}">
+	<img class="w-100" src="{% if post.image contains "://" %}{{ post.image }}{% else %}{{ site.baseurl }}/{{ post.image }}{% endif %}" alt="{{ post.title }}">
+	</a>
+	</div>
+{% endif %}
+</div>
