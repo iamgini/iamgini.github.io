@@ -1,0 +1,20 @@
+- title: About
+  url: /about
+
+- title: Ansible
+  url: /ansible
+
+- title: OpenShift
+  url: /openshift
+
+- title: Kubernetes
+  url: /kubernetes
+
+- title: Community
+  url: /events
+
+- title: My Books
+  url: /books
+
+- title: Sitemap
+  url: /sitemap

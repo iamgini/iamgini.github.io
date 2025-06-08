@@ -1,0 +1,18 @@
+<!-- start of short sitemap-->
+<div class="jumbotron jumbotron-fluid-round jumbotron-home pt-0 pb-0 mt-3 mb-2rem bg-lightgreen2 position-relative">
+    <div class="pl-4 pr-0 h-100 tofront">
+        <div class="row justify-content-between">
+            <!-- removed d-none from below-->
+            <div class="col-md-12 pt-5 pb-5 d-md-block pr-0" style="vertical-align: middle; padding-left: 0xp;">
+                <div style="vertical-align: middle;">
+                    {% for post in site.pages %}
+                        {% if post.titleshort %}
+                            <a class="sscroll btn btn-light2 btn-sm" style="margin: 6px;" href="{{site.baseurl}}{{post.url}}">{{ post.titleshort | downcase }}</a>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end short sitemap-->
