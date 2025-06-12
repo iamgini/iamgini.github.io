@@ -12,15 +12,18 @@ titleshort: AAP
 
 - [Ansible Automation Platform](#ansible-automation-platform)
   - [Enable RHEL and AAP Subscriptions](#enable-rhel-and-aap-subscriptions)
+  - [Red Hat Container Registry Authentication](#red-hat-container-registry-authentication)
   - [AAP Download Options](#aap-download-options)
   - [Extract the AAP Installer](#extract-the-aap-installer)
   - [Get Red Hat Registry Credential](#get-red-hat-registry-credential)
   - [SSH Access and Credentials](#ssh-access-and-credentials)
   - [Ansible Automation Platform - Containerized Setup](#ansible-automation-platform---containerized-setup)
   - [Removing instance from cluster](#removing-instance-from-cluster)
+- [How to check AAP and patch version](#how-to-check-aap-and-patch-version)
 - [AAP SSL Certificate Renewal](#aap-ssl-certificate-renewal)
   - [Renewing the self-signed SSL certificate](#renewing-the-self-signed-ssl-certificate)
 - [AAP on Clouds](#aap-on-clouds)
+- [Reset Gateway user password from CLI](#reset-gateway-user-password-from-cli)
 - [AD/LDAP Integration - AAP 2.5](#adldap-integration---aap-25)
   - [Authentication mapping](#authentication-mapping)
 - [AD/LDAP Integration - AAP 2.4](#adldap-integration---aap-24)
@@ -69,6 +72,11 @@ $ sudo subscription-manager repos \
 $ sudo subscription-manager repos \
   --enable=ansible-automation-platform-2.1-for-rhel-8-x86_64-rpms
 ```
+
+### Red Hat Container Registry Authentication
+
+- [Red Hat Container Registry Authentication](https://access.redhat.com/articles/RegistryAuthentication) - Official guide
+- [Creating Registry Service Accounts](https://access.redhat.com/terms-based-registry/accounts)
 
 ### AAP Download Options
 
@@ -150,6 +158,22 @@ Successfully deprovisioned aap-rhel-92-2.lab.local
 (changed: True)
 ```
 
+## How to check AAP and patch version
+
+Refer to the [Patch releases](https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.5/html-single/release_notes/index#patch_releases) document for the component details.
+
+You can check the Con
+```shell
+$ podman inspect -f "{{ .Config.Labels.version }}" automation-controller-web
+4.6.9
+
+# or check the controller RPM
+$ podman exec -it automation-controller-web /bin/bash
+
+bash-4.4$ rpm -q ansible-automation-platform-common
+ansible-automation-platform-common-2.5-2.el8ap.noarch
+```
+
 ## AAP SSL Certificate Renewal
 
 ### Renewing the self-signed SSL certificate
@@ -169,6 +193,21 @@ aap_service_regen_cert=true
 
 - [Ansible Automation Platform - Cloud Deployments](https://docs.redhat.com/en/documentation/ansible_on_clouds/2.x)
 - [Ansible on Azure Articles](https://access.redhat.com/articles/6983528)
+
+## Reset Gateway user password from CLI
+
+```shell
+# Login to the automation gateway container
+$ podman exec -it automation-gateway bash
+
+# Change password for user; e.g: admin
+bash-4.4$ aap-gateway-manage changepassword admin
+Changing password for user 'admin'
+Password:
+Password (again):
+Password changed successfully for user 'admin'
+bash-4.4$
+```
 
 ## AD/LDAP Integration - AAP 2.5
 
