@@ -162,7 +162,8 @@ Successfully deprovisioned aap-rhel-92-2.lab.local
 
 Refer to the [Patch releases](https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.5/html-single/release_notes/index#patch_releases) document for the component details.
 
-You can check the Con
+You can check the WEBUI and find the controller version
+
 ```shell
 $ podman inspect -f "{{ .Config.Labels.version }}" automation-controller-web
 4.6.9
