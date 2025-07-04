@@ -264,6 +264,16 @@ uid=%(user)s,cn=users,cn=accounts,dc=sandbox,dc=dev
 ]
 ```
 
+To allow the user to login with email:
+
+```json
+[
+  "cn=users,dc=sandbox,dc=dev",
+  "SCOPE_SUBTREE",
+  "(|(sAMAccountName=%(user)s)(mail=%(user)s))"
+]
+```
+
 - **LDAP User Attribute Map**:
 
 ```json

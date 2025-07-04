@@ -10,6 +10,7 @@ featured: false
 hidden: false
 titleshort: jekyll
 ---
+
 # Install Jekyll & Bundler
 
 Refer the documentation based on your Operating System.
@@ -39,7 +40,7 @@ Jekyll requires Ruby v2.5.0 or higher but MacOS Big Sur 11.x is already installe
 ruby 3.0.2p107 (2021-07-07 revision 0db68f0233) [x86_64-darwin20]
 ```
 
-If you’re running a previous version of macOS, you’ll have to install a newer version of Ruby. 
+If you’re running a previous version of macOS, you’ll have to install a newer version of Ruby.
 
 ## Install Ruby using `rbenv` (Multiple Ruby versions)
 
@@ -78,7 +79,7 @@ $ ruby -v
 ruby 3.0.0p0 (2020-12-25 revision 95aff21468)
 
 ## check versions
-% rbenv versions     
+% rbenv versions
 * system (set by /Users/gini/.rbenv/version)
   2.7.0
   3.0.0
@@ -87,9 +88,9 @@ ruby 3.0.0p0 (2020-12-25 revision 95aff21468)
 % rbenv local 2.7.0
 
 ## show current local version
-% rbenv version    
+% rbenv version
 2.7.0 (set by /Users/gini/codes/ginigangadharan.github.io/.ruby-version)
-gini@greenmango ginigangadharan.github.io % 
+gini@greenmango ginigangadharan.github.io %
 
 ```
 

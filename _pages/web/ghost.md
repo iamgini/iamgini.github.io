@@ -1,10 +1,25 @@
-# Ghost in Container
+---
+layout: post
+title: Ghost
+author: gini
+categories: [ ghost ]
+# image: "assets/images/2020/infrastructure.jpg"
+tags: [web, ghost]
+permalink: /ghost
+featured: false
+hidden: false
+titleshort: ghost
+---
 
-$ docker run -d --name some-ghost ghost
-$ docker run -d -p 3001:2368 -e url=http://localhost:3001  --name some-ghost ghost
 
-docker compose
-```
+## Ghost in Container
+
+$ podman run -d --name some-ghost ghost
+$ podman run -d -p 3001:2368 -e url=http://localhost:3001  --name some-ghost ghost
+
+### Podman compose
+
+```yaml
 version: '3.1'
 
 services:
@@ -27,4 +42,4 @@ services:
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: example
-```      
+```

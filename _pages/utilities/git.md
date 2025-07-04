@@ -13,6 +13,7 @@ image: "assets/images/tools-1426927308491-6380b6a9936f.jpeg"
 
 - [Git Cheat Sheet](#git-cheat-sheet)
 - [How to clean Git commit history](#how-to-clean-git-commit-history)
+- [How to fetch latest content from main repo to forked repo](#how-to-fetch-latest-content-from-main-repo-to-forked-repo)
 
 
 ## Git Cheat Sheet
@@ -53,3 +54,49 @@ git push -f origin main
 ```
 
 Original post: [How to Delete Commit History in Github](https://tecadmin.net/delete-commit-history-in-github/)
+
+## How to fetch latest content from main repo to forked repo
+
+Follow these steps to update your forked repository with the latest changes from the original (eg. `main` or `master`) repository.
+
+**1. Add the original repo as `upstream` (only once)**
+
+```bash
+git remote add upstream <original repo URL>
+```
+
+> Skip this step if you've already added `upstream`. You can verify with:
+
+```bash
+git remote -v
+```
+
+**2. Fetch the latest changes from the original repo**
+
+```bash
+git fetch upstream
+```
+
+**3. Merge or rebase changes into your local branch**
+
+Make sure you’re on your working branch (e.g. `master` or `main`):
+
+```bash
+git checkout master
+git merge upstream/master
+```
+
+> Optional: Use rebase for cleaner history:
+
+```bash
+git checkout main
+git rebase upstream/main
+```
+
+**4. Push the updated branch to your fork**
+
+```bash
+git push origin main
+```
+
+Now your forked repository is up to date with the latest changes from the main/original repository.
