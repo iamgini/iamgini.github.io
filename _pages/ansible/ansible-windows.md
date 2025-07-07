@@ -10,6 +10,7 @@ hidden: false
 showindex: true
 ---
 
+
 Checkout the [Ansible Automation for Windows](https://www.techbeatly.com/ansible-windows/) guides.
 
 - [WinRM vs OpenSSH – Pros \& Cons](#winrm-vs-openssh--pros--cons)
