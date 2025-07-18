@@ -33,8 +33,10 @@ titleshort: Artificial Intelligence
   - [InstructLab](#instructlab)
   - [Podman AI Lab](#podman-ai-lab)
   - [Red Hat OpenShift AI](#red-hat-openshift-ai)
+- [AI Model Types](#ai-model-types)
 - [Some facts](#some-facts)
 - [References](#references)
+- [AI Tools](#ai-tools)
 
 ## Introduction - AI, ML, DL, and GenAI
 
@@ -146,6 +148,16 @@ Deepfakes are media — predominantly images and videos — altered by AI to dep
 
 **[Red Hat OpenShift AI](https://www.redhat.com/en/technologies/cloud-computing/openshift/openshift-ai)** is a powerful platform for deploying and scaling AI applications across hybrid cloud environments. Built on open-source technologies, it offers a trusted foundation for teams to experiment, serve models, and deliver innovative AI-driven apps.
 
+## AI Model Types
+
+Linear regression models - TODO
+
+What is unlabeled data - TODO
+
+AI Bias, Fairness, discrimination - TODO
+
+AI hallucination - TODO
+
 
 ## Some facts
 
@@ -160,3 +172,8 @@ Deepfakes are media — predominantly images and videos — altered by AI to dep
 - [InstructLab – “Ever imagined the ease of tuning pre-trained LLMs? InstructLab makes it a reality. Let’s delve into how it sets itself apart from other model tuning methods.”](https://medium.com/@syeda9118/instructlab-ever-imagined-the-ease-of-tuning-pre-trained-llms-3331ccea8d88) (Blog)
 - [Generative AI Development with Podman AI Lab, InstructLab, & OpenShift AI](https://www.youtube.com/watch?v=tZj8j3fdXy4) (Video)
 - [Glossary of artificial intelligence](https://en.wikipedia.org/wiki/Glossary_of_artificial_intelligence)
+
+## AI Tools
+
+- Cluely
+-

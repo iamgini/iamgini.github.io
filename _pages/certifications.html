@@ -1,0 +1,106 @@
+---
+title: "Professional Certifications"
+layout: default
+permalink: "/certifications"
+---
+
+
+<div style="
+  position: relative;
+  background-color: aqua;
+  background-image: url('/assets/images/2024/gineesh-redhat-one-2024-bali.jpeg');
+  background-size: cover;
+  background-position: center center;
+  height: 600px;
+  padding-bottom: 40px;  /* padding at bottom */
+  ">
+
+  <div class="container" style="
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    flex-direction: column; /* stack vertically */
+    justify-content: center; /* vertical center */
+    align-items: flex-start; /* left align */
+    padding-left: 20px;
+    gap: 10px; /* spacing between title and paragraph */
+  ">
+    <h2 class="article-headline" style="
+      color: white;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+      margin: 0;
+    ">{{page.title}}</h2>
+    <span class="small btn btn-sm btn-round" style="
+  background-color: #FF0000;  /* YouTube red */
+  color: white;               /* white text */
+  border: none;               /* no border */
+">
+</span>
+
+    <!-- <p style="color: white; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); margin: 0;">
+      Journey Through the Past: Gineesh's Event History - Meetups, Speakers, Workshops, and Gathering
+    </p> -->
+  </div>
+</div>
+
+<!--
+col-md-6 = 2 per row on medium screens.
+col-lg-4 = 3 per row on large screens.
+Add col-xl-3 if you want 4 per row on XL screens.
+-->
+<!-- <div class="container py-5">
+  <div class="row">
+    {% assign cert_list = site.data.certifications | sort: 'issue_date' | reverse %}
+    {% for cert in cert_list %}
+      <div class="col-md-6 col-lg-4 mb-4 d-flex">
+
+        <div class="card h-100 shadow-sm p-3">
+  <div class="card-body d-flex flex-column p-0">
+    <h5 class="card-title mb-2">
+      <a class="text-dark" href="{{ cert.url }}" target="_blank">{{ cert.cert_title }}</a>
+    </h5>
+    <p class="card-text small mb-3">
+      <strong>Issue by:</strong> {{ cert.issued_by }} on {{ cert.issue_date }}<br>
+
+    </p>
+
+  </div>
+</div>
+
+
+      </div>
+    {% endfor %}
+  </div>
+</div> -->
+
+<div class="container py-5">
+  {% assign cert_list = site.data.certifications | sort: 'issue_date' | reverse %}
+  {% for cert in cert_list %}
+    <div class="d-flex align-items-center mb-5">
+      {% if cert.image %}
+        <img src="{{ cert.image }}" alt="{{ cert.cert_title }}" style="width: 96px; height: 96px; margin-right: 2rem;">
+      {% else %}
+        <div style="width: 96px; height: 96px; margin-right: 2rem; background-color: #fff;"></div>
+      {% endif %}
+
+      <div>
+        <h3 class="mb-1 fw-bold">
+          <a href="{{ cert.url }}" target="_blank" class="text-decoration-none text-dark">
+            {{ cert.cert_title }}
+          </a>
+        </h3>
+
+        {% if cert.issue_date %}
+          <p class="mb-0 text-muted">
+            Issued by: <strong>{{ cert.issued_by }}</strong> on {{ cert.issue_date | date: "%Y %B %d" }}
+          </p>
+        {% else %}
+          <p class="mb-0 text-muted">
+            Issued by: <strong>{{ cert.issued_by }}</strong>
+          </p>
+        {% endif %}
+      </div>
+    </div>
+  {% endfor %}
+</div>

@@ -1,0 +1,207 @@
+- cert_title: 'CKAD: Certified Kubernetes Application Developer'
+  issued_by: The Linux Foundation
+  issue_date: 2025-07-15
+  expiry_date: 2027-07-15
+  id: 60d0ee9f-50f1-4db2-9014-a8172b11fadd
+  url: https://www.credly.com/earner/earned/badge/60d0ee9f-50f1-4db2-9014-a8172b11fadd
+  image: https://images.credly.com/size/160x160/images/cc8adc83-1dc6-4d57-8e20-22171247e052/blob
+
+- cert_title: 'CKA: Certified Kubernetes Administrator'
+  issued_by: The Linux Foundation
+  issue_date: 2025-06-25
+  expiry_date: 2027-06-25
+  id: 5e0b8646-db02-4f81-8a30-031eb29b0699
+  url: https://www.credly.com/earner/earned/badge/5e0b8646-db02-4f81-8a30-031eb29b0699
+  image: https://images.credly.com/size/160x160/images/8b8ed108-e77d-4396-ac59-2504583b9d54/cka_from_cncfsite__281_29.png
+
+- cert_title: 'KCSA: Kubernetes and Cloud Native Security Associate'
+  issued_by: The Linux Foundation
+  issue_date: 2025-04-22
+  expiry_date: 2027-04-22
+  id: null
+  url: null
+  image: null
+
+- cert_title: '2025 Red Hat Technical Workshop - Configuration as Code for Ansible Automation Platform'
+  issued_by: Red Hat
+  issue_date: 2025-02-04
+  expiry_date: null
+  id: null
+  url: null
+  image: null
+
+- cert_title: 'KCNA: Kubernetes and Cloud Native Associate'
+  issued_by: The Linux Foundation
+  issue_date: 2024-06-13
+  expiry_date: 2026-06-13
+  id: null
+  url: null
+  image: null
+
+- cert_title: 'AWS Certified Solutions Architect – Associate'
+  issued_by: Amazon Web Services Training and Certification
+  issue_date: 2024-03-21
+  expiry_date: 2027-03-21
+  id: null
+  url: null
+  image: null
+
+- cert_title: 'Red Hat Certified Architect (RHCA)'
+  issued_by: Red Hat
+  issue_date: 2024-03-07
+  expiry_date: 2026-03-02
+  id: null
+  url: null
+  image: null
+
+- cert_title: 'Red Hat Certified OpenShift Administrator'
+  issued_by: Red Hat
+  issue_date: 2024-03-07
+  expiry_date: 2027-03-07
+  id: null
+  url: null
+  image: null
+
+- cert_title: 'Red Hat OpenShift Administration II: Configuring a Production Cluster (DO280) - Ver. 4.12'
+  issued_by: Red Hat
+  issue_date: 2024-02-24
+  expiry_date: null
+  id: null
+  url: null
+  image: null
+
+- cert_title: 'Red Hat Certified Specialist in Containers'
+  issued_by: Red Hat
+  issue_date: 2023-11-22
+  expiry_date: 2026-11-22
+  id: null
+  url: null
+  image: null
+
+- cert_title: 'Red Hat Certified Specialist in Ansible Network Automation'
+  issued_by: Red Hat
+  issue_date: 2023-10-19
+  expiry_date: 2026-10-19
+  id: null
+  url: null
+  image: null
+
+- cert_title: 'Red Hat Certified Specialist in Managing Automation with Ansible Automation Platform'
+  issued_by: Red Hat
+  issue_date: 2023-03-14
+  expiry_date: 2026-03-14
+  id: null
+  url: null
+  image: null
+
+- cert_title: 'Red Hat Certified Specialist in Developing Automation with Ansible Automation Platform'
+  issued_by: Red Hat
+  issue_date: 2023-03-02
+  expiry_date: 2026-03-02
+  id: null
+  url: null
+  image: null
+
+- cert_title: 'Red Hat Certified Engineer (RHCE)'
+  issued_by: Red Hat
+  issue_date: 2021-05-29
+  expiry_date: 2027-03-07
+  id: null
+  url: null
+  image: null
+
+- cert_title: 'Red Hat Certified System Administrator (RHCSA)'
+  issued_by: Red Hat
+  issue_date: 2021-05-29
+  expiry_date: 2027-03-07
+  id: null
+  url: null
+  image: null
+
+- cert_title: '2023 Red Hat Impact Excellence Program Contributor'
+  issued_by: Red Hat
+  issue_date: 2023-10-04
+  expiry_date: 2024-10-04
+  id: null
+  url: null
+  image: null
+
+- cert_title: 'Multicloud Network Associate'
+  issued_by: Aviatrix
+  issue_date: 2020-09-01
+  expiry_date: 2024-09-01
+  id: null
+  url: null
+  image: null
+
+- cert_title: 'Red Hat Certified Specialist in Advanced Automation: Ansible Best Practices'
+  issued_by: Red Hat
+  issue_date: 2021-03-19
+  expiry_date: 2024-03-19
+  id: null
+  url: null
+  image: null
+
+- cert_title: 'Intermediate for Istio by Solo.io'
+  issued_by: Solo.io
+  issue_date: 2022-01-26
+  expiry_date: 2024-01-26
+  id: null
+  url: null
+  image: null
+
+- cert_title: 'Fundamentals for Istio by Solo.io'
+  issued_by: Solo.io
+  issue_date: 2022-01-15
+  expiry_date: 2024-01-15
+  id: null
+  url: null
+  image: null
+
+- cert_title: 'Red Hat Certified OpenShift Application Developer'
+  issued_by: Red Hat
+  issue_date: 2020-07-24
+  expiry_date: 2023-07-24
+  id: null
+  url: null
+  image: null
+
+- cert_title: 'HashiCorp Certified: Terraform Associate (002)'
+  issued_by: HashiCorp
+  issue_date: 2020-06-30
+  expiry_date: 2023-06-30
+  id: null
+  url: null
+  image: null
+
+- cert_title: 'Oracle Cloud Infrastructure 2019 Certified Architect Associate'
+  issued_by: Oracle
+  issue_date: 2020-11-08
+  expiry_date: 2021-11-08
+  id: null
+  url: null
+  image: null
+
+- cert_title: 'Oracle Cloud Infrastructure Foundations 2020 Certified Associate'
+  issued_by: Oracle
+  issue_date: 2021-10-24
+  expiry_date: 2021-10-24
+  id: null
+  url: null
+  image: null
+
+- cert_title: 'AWS Certified Solutions Architect – Associate'
+  issued_by: Amazon Web Services Training and Certification
+  issue_date: 2018-03-05
+  expiry_date: 2021-03-05
+  id: null
+  url: null
+  image: null
+
+- cert_title: 'Cisco Certified Network Associate Routing and Switching (CCNA Routing and Switching)'
+  issued_by: Cisco
+  issue_date: 2006-12-15
+  expiry_date: 2009-12-15
+  id: null
+  url: null
+  image: null
