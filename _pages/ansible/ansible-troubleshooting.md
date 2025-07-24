@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Troubleshooting Ansible and Ansible Automation Platform
+title: Troubleshooting Ansible Automation Platform
 categories: [ ansible ]
 image: "assets/images/2020/ansible-automation.png"
 tags: [automation]
-permalink: /ansible-troubleshooting
+permalink: /aap-troubleshooting
 featured: false
 hidden: false
 titleshort: Troubleshooting Ansible
