@@ -14,7 +14,7 @@ titleshort: Troubleshooting Ansible
 - [Error:module 'enum' has no attribute 'IntFlag'](#errormodule-enum-has-no-attribute-intflag)
 - [Error with `nosuid` when read/write files](#error-with-nosuid-when-readwrite-files)
 - [Checking container logs](#checking-container-logs)
-- [How to enable DEBUG mode for auth in ~/aap/gateway/etc/settings.py](#how-to-enable-debug-mode-for-auth-in-aapgatewayetcsettingspy)
+- [How to enable DEBUG mode for AAP Components](#how-to-enable-debug-mode-for-aap-components)
 
 
 ## Error with Self Signed SSL Cert on SCM server
@@ -143,7 +143,9 @@ openssl x509 -in <filename.cert> -noout -subject -issuer
 bundle cert
 cat rootca intermediate | tee bundle.pem
 
-## How to enable DEBUG mode for auth in ~/aap/gateway/etc/settings.py
+## How to enable DEBUG mode for AAP Components
+
+E.g. Enable DEBUB for authentication containers - in `~/aap/gateway/etc/settings.py`
 
 ```shell
 .
