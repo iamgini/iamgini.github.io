@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Troubleshooting Ansible
+title: Troubleshooting Ansible and Ansible Automation Platform
 categories: [ ansible ]
 image: "assets/images/2020/ansible-automation.png"
 tags: [automation]
