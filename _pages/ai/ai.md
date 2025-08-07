@@ -33,7 +33,7 @@ titleshort: Artificial Intelligence
   - [InstructLab](#instructlab)
   - [Podman AI Lab](#podman-ai-lab)
   - [Red Hat OpenShift AI](#red-hat-openshift-ai)
-- [AI Model Types](#ai-model-types)
+- [TODO](#todo)
 - [Some facts](#some-facts)
 - [References](#references)
 - [AI Tools](#ai-tools)
@@ -148,7 +148,9 @@ Deepfakes are media — predominantly images and videos — altered by AI to dep
 
 **[Red Hat OpenShift AI](https://www.redhat.com/en/technologies/cloud-computing/openshift/openshift-ai)** is a powerful platform for deploying and scaling AI applications across hybrid cloud environments. Built on open-source technologies, it offers a trusted foundation for teams to experiment, serve models, and deliver innovative AI-driven apps.
 
-## AI Model Types
+## TODO
+
+-- AI Model Types
 
 Linear regression models - TODO
 
@@ -158,6 +160,12 @@ AI Bias, Fairness, discrimination - TODO
 
 AI hallucination - TODO
 
+Human in the loop and human over the loop
+
+AI Definition
+
+Wat is adversarial-robustness-toolbox (ART)
+https://github.com/IBM/adversarial-robustness-toolbox
 
 ## Some facts
 

@@ -45,6 +45,8 @@ titleshort: AAP
 
 (Formerly Ansible Tower)
 
+- [Ansible Automation Platform Solution Guides](https://access.redhat.com/articles/7117333)
+
 ### Enable RHEL and AAP Subscriptions
 
 Make sure you subscribed to Red Hat and added RHEL Subscription.

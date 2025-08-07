@@ -16,6 +16,7 @@ This is a page where I keep all those list of tools on internet, which we use fo
 - [Kubernetes](#kubernetes)
 - [Security and Scanning](#security-and-scanning)
 - [Utilities](#utilities)
+- [AI Automation](#ai-automation)
 - [Cloud Management](#cloud-management)
 - [Network Tools](#network-tools)
   - [Unattened Remote Access](#unattened-remote-access)
@@ -35,6 +36,11 @@ This is a page where I keep all those list of tools on internet, which we use fo
 - **[git.io](https://git.io/)** - Shorten any `github.com` url (URL Shortner)
 - **[jsonpath tester](https://jsonpath.com/)** - Test your Jsonpath queries easily with jason data. Very useful when you handle output in Ansible, Kubernetes, OpenShift etc.
 - **[asciinema.org](https://asciinema.org)** - Record and share your terminal sessions, the right way.
+
+## AI Automation
+
+- [n8n -Flexible AI workflow automation](https://n8n.io/)
+
 
 ## Cloud Management
 

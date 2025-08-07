@@ -166,3 +166,4 @@ Ansible 2.5 and above work with Python 3.
 - [Janus](https://github.com/ansible-middleware/janus) - The project ansible-middleware/janus holds a set of playbooks used to transform upstream collection (such as ansible-middleware/wildfly) to downstream collection (redhat/eap) using [FQCN migration|https://github.com/ansible-collections/community.fqcn_migration]. Please refers to this project for more information.
 - [community.fqcn_migration](https://github.com/ansible-collections/community.fqcn_migration) - This project, called fqcn_migration, is a set of Ansible roles designed to rename a collection and even changed its namespace.
 - [How to Stop/Start/Restart & Disable/Enable Containerized Ansible Automation Platform 2.5 using systemd?](https://access.redhat.com/solutions/7090499)
+- [Ansible plug-ins for Red Hat Developer Hub](https://developers.redhat.com/products/ansible/RHDHplugins)

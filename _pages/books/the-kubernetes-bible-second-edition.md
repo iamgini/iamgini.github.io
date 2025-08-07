@@ -24,6 +24,9 @@ book_links:
     url: http://techbeatly.com/k8sbibleamz
   - name: Buy on Barnes & Noble
     url: https://www.techbeatly.com/k8sbiblebn
+  - name: Oreilly
+    url: https://www.oreilly.com/library/view/the-kubernetes-bible/9781835464717/
+
 
 authors:
   - name: Gineesh Madapparambath
