@@ -14,6 +14,7 @@ image: "assets/images/tools-1426927308491-6380b6a9936f.jpeg"
 - [Git Cheat Sheet](#git-cheat-sheet)
 - [How to clean Git commit history](#how-to-clean-git-commit-history)
 - [How to fetch latest content from main repo to forked repo](#how-to-fetch-latest-content-from-main-repo-to-forked-repo)
+- [Create a PR to main](#create-a-pr-to-main)
 
 
 ## Git Cheat Sheet
@@ -100,3 +101,30 @@ git push origin main
 ```
 
 Now your forked repository is up to date with the latest changes from the main/original repository.
+
+## Create a PR to main
+
+- [Install `gh` utility](https://github.com/cli/cli/blob/trunk/docs/install_linux.md)
+- Authenticate with `gh login`
+
+1. Raise a PR
+
+```shell
+gh pr create \
+  --base main \
+  --head cf-pages \
+  --title "Deploy blog updates" \
+  --body "Added new blog post and updates to site"
+```
+
+2. Approve the PR (from CLI)
+
+```shell
+gh pr review <PR_NUMBER_OR_URL> --approve
+```
+
+3. Merge the PR
+
+```shell
+gh pr merge <PR_NUMBER_OR_URL> --merge
+```
