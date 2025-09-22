@@ -1,16 +1,17 @@
 ---
 layout: post
 title: "dmidecode – best usages [updated]"
-author: gini
-categories: [Infrastructre & Hardware,Utilities,]
+author: Gineesh Madapparambath
+categories: [Infrastructre & Hardware, Utilities]
+url: /dmidecode-best-usages-updated/
 image: 
-tags: [infrastructre & hardware,utilities,]
+tags: [Infrastructre & Hardware, Utilities]
 ext_url: https://www.techbeatly.com/dmidecode-best-usages-updated/
 show-avatar: true
 featured: false
 hidden: false
 ---
 
-Check Hyper-threading (Virtualization) available or not # dmidecode -t processor | grep HTT HTT (Multi-threading) HTT (Multi-threading) Check if its enabled or not. # lscpu...
+Check Hyper-threading (Virtualization) available or not 
 
-Read ["dmidecode – best usages [updated]"](https://www.techbeatly.com/dmidecode-best-usages-updated/).
+Read [dmidecode – best usages [updated]](https://www.techbeatly.com/dmidecode-best-usages-updated/).
