@@ -38,7 +38,7 @@ It’s officially part of the **ATP Tour calendar**, with results recorded for p
 
 ## Tickets and fan access
 
-If you’re thinking of attending, a **very limited number of tickets** are left. You can still grab seats for the **Open Practice Day** on September 18 (presented by FICO) — tickets start at **$20 ($31.65 with fees)** via [**Ticketmaster**](https://www.ticketmaster.com/laver-cup-tickets/artist/2481018). Also, if you want regular updates and offers, you can register as a **Laver Cup Insider** at [lavercup.com](https://lavercup.com/).
+If you’re thinking of attending, a **very limited number of tickets** are left. You can still grab seats for the **Open Practice Day** on September 18 (presented by FICO) — tickets start at **$20 ($31.65 with fees)** via [**Ticketmaster**](https://www.ticketmaster.com/laver-cup-tickets/artist/2481018). Also, if you want regular updates and offers, you can register as a **Laver Cup Insider** at [**lavercup.com**](https://lavercup.com/).
 
 ## Final thoughts
 
