@@ -41,8 +41,6 @@ titleshort: Ansible
 
 ## Ansible Automation Platform (Formerly Ansible Tower)
 
-
-
 ### References
 
 - [Explore Ansible Automation Platform](https://www.ansible.com/products/ansible-training) - Hands on Lab/Practices via **instruqt**.
